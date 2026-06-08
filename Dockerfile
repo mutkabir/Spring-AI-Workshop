@@ -1,7 +1,8 @@
 # --Build stage--
 FROM eclipse-temurin:25-jdk AS build
 
-# Install maven manually in case CI/CD base imaage does't include itRUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/list/*
+# Install maven manually in case CI/CD base imaage does't include it
+RUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/list/*
 
 # Set working directory
 WORKDIR /app
